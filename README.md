@@ -1,7 +1,7 @@
 # Сравнение создания списка и организации стека в Java, Python и C++
 ## Создание массива (списка)
 ### Java
-```
+```java
 ArrayList<String> list = new ArrayList<>();
 list.add("элемент1");
 list.add("элемент2");
@@ -11,7 +11,7 @@ list.add("элемент2");
 - Метод `add()` для добавления элементов
 
 ### Python
-```
+```py
 list = []
 list.append(1)
 list.append(2)
@@ -21,7 +21,7 @@ list.append(2)
 - Метод `append()` для добавления элементов
 
 ### C++
-```
+```cpp
 std::vector<std::string> vec;
 vec.push_back("элемент1");
 vec.push_back("элемент2");
@@ -31,7 +31,7 @@ vec.push_back("элемент2");
 - Метод `push_back()` для добавления элементов
 ## Организация стека
 ### Java
-```
+```java
 Stack<String> stack = new Stack<>();
 stack.push("элемент1");
 stack.push("элемент2");
@@ -41,7 +41,7 @@ String top = stack.pop();
 - Метод `pop()` одновременно возвращает и удаляет элемент
 - Использование дженериков для типизации
 ### Python
-```
+```py
 stack = []
 stack.append("элемент1")
 stack.append("элемент2")
@@ -51,7 +51,7 @@ top = stack.pop()
 - `append()` для добавления, `pop()` для извлечения
 - Мин. синтаксис, встроенная поддержка
 ### C++
-```
+```cpp
 std::stack<std::string> st;
 st.push("элемент1");
 st.push("элемент2");
