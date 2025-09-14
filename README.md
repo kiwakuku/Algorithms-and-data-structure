@@ -1,1 +1,1 @@
-# Algorithms-and-data-structure
+# Сравнение создание списка и организации стека в java, python и с++
