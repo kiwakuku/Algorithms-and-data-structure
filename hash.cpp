@@ -2,11 +2,18 @@
 #include <unordered_map>
 
 int main() {
-    std::unordered_map<std::string, int> ht = {{"apple", 10}, {"banana", 20}, {"cherry", 30}};
+    
+    std::unordered_map<std::string, int> myMap;
 
-    for (const auto& p : ht)
-        std::cout << p.first << " " << p.second << "\n";
+    myMap["apple"] = 1;
+    myMap["banana"] = 2;
+    myMap["orange"] = 3;
+    
+    for (const auto& pair : myMap) {
+        std::cout << pair.first << ": " << pair.second << std::endl;
+    }
 
     return 0;
 }
+
 
