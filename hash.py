@@ -1,12 +1,11 @@
-import heapq
-heap = []
-heapq.heappush(heap, 3)
-heapq.heappush(heap, 2)
-heapq.heappush(heap, 4)
-heapq.heappush(heap, 1)
-heapq.heappush(heap, 5)
+hash = {}
 
-print(f"{heap}") 
+hash["яблоко"] = 150  
+hash["банан"] = 200   
+hash["апельсин"] = 180 
+
+for key, value in hash.items():
+    print(f"{key},{value}")
 
 
 
