@@ -1,4 +1,10 @@
-ht = {"apple": 10, "banana": 20, "cherry": 30}
+import heapq
+heap = []
+heapq.heappush(heap, 3)
+heapq.heappush(heap, 1)
+heapq.heappush(heap, 4)
+heapq.heappush(heap, 1)
+heapq.heappush(heap, 5)
 
-for k, v in ht.items():
-    print(f"{k} -> {v}")
+print(f"Куча после добавления: {heap}") 
+
