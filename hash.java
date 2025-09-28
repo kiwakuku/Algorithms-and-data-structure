@@ -9,7 +9,8 @@ public class Main {
         ht.put("cherry", 30);
 
         for (var entry : ht.entrySet()) {
-            System.out.println(entry.getKey() + " -> " + entry.getValue());
+            System.out.println(entry.getKey() + " " + entry.getValue());
         }
     }
 }
+
