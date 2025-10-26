@@ -1,51 +1,38 @@
 public class BubbleSortExample {
-
-    // Метод для печати массива
-    public static void printArray(int[] array) {
-        System.out.print("["); 
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i]);
-            if(i != array.length - 1){
-                System.out.print(", ");
-            }
-        }
-        System.out.println("]");
-    }
-
-    // Метод для сортировки пузырьком
     public static void bubbleSort(int[] array) {
-        boolean swapped;                  // Переменная для отслеживания наличия перестановок
-        int n = array.length;             // Длина массива
-        
+        boolean swapped;
         do {
-            swapped = false;              // Сбрасываем флаг перед каждым новым проходом
+            swapped = false;
             
-            // Проходим по массиву и проверяем пары соседних элементов
-            for (int i = 1; i < n; i++) {
-                if (array[i - 1] > array[i]) {       // Если предыдущий больше следующего
-                    // Переставляем элементы местами
+            // Внешний цикл проходит по всему массиву
+            for (int i = 0; i < array.length - 1; i++) {
+                
+                // Если текущий элемент больше следующего, меняем их местами
+                if (array[i] > array[i+1]) {
                     int temp = array[i];
-                    array[i] = array[i - 1];         
-                    array[i - 1] = temp;
+                    array[i] = array[i+1];
+                    array[i+1] = temp;
                     
-                    swapped = true;          // Есть перестановка
+                    swapped = true;   // Обозначаем, что произошел обмен
                 }
             }
-            
-            n--;                             // Уменьшаем длину, поскольку самый большой элемент уже на своём месте
-        } while(swapped);                     // Повторяем цикл, пока были произведены изменения
+        } while(swapped);           // Повторяем пока были произведены изменения
     }
 
-    // Тестирование метода
-    public static void main(String[] args) {
-        int[] data = {64, 34, 25, 12, 22, 11}; // Исходный несортированный массив
-        
+    public static void main(String args[]) {
+        int[] array = {64, 34, 25, 12, 22, 11, 90};
         System.out.println("Исходный массив:");
-        printArray(data);
+        printArray(array);
         
-        bubbleSort(data);                      // Выполняем сортировку пузырьком
+        bubbleSort(array);
         
         System.out.println("\nОтсортированный массив:");
-        printArray(data);
+        printArray(array);
+    }
+
+    private static void printArray(int[] array) {
+        for (int value : array) {
+            System.out.print(value + " ");
+        }
     }
 }
