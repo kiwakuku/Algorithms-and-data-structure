@@ -2,7 +2,7 @@
 # Вариант 6
 ## "Создайте рекурсивную функцию для подсчета количества гласных букв в строке"
 ## Как работает алгоритм
-Функция в python  ```count_vowels(s)``` сначала проверяет базовый случай ```if not s```:, и если строка пуста, возвращает ```0```. Иначе берётся первый символ ```first_char = s[0]``` и остаток строки ```rest = s[1:]```. Если ```first_char.lower() in 'aeiou'```, то возвращается ```1 + count_vowels(rest)```, иначе — ```count_vowels(rest)```. 
+Функция в python  ```count_vowels(s)``` сначала проверяет базовый случай ```if not s:```, и если строка пуста, возвращает ```0```. Иначе берётся первый символ ```first_char = s[0]``` и остаток строки ```rest = s[1:]```. Если ```first_char.lower() in 'aeiou'```, то возвращается ```1 + count_vowels(rest)```, иначе — ```count_vowels(rest)```. 
 
 В C++ версии функция ```count_vowels(const string& s, int index = 0)``` проверяет условие ```if (index >= s.length())```, и при его истинности возвращает ```0```. Затем текущий символ присваивается как ```char current = s[index]```, и проверяется выражение ```bool is_vowel = (current == 'a' || current == 'e' || current == 'i' || current == 'o' || current == 'u' || current == 'A' || current == 'E' || current == 'I' || current == 'O' || current == 'U');```. После этого возвращается ```(is_vowel ? 1 : 0) + count_vowels(s, index + 1)```. 
 
