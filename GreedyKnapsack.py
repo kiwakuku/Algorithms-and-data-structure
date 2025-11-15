@@ -39,7 +39,7 @@ def greedy_knapsack_2_approx(items, capacity):
 
 
 def main():
-    print("=== 2-аппроксимационный жадный алгоритм для 0-1 рюкзака ===")
+    print("2-аппроксимационный жадный алгоритм для 0-1 рюкзака")
     
     # Чтение входных данных от пользователя
     try:
@@ -80,7 +80,7 @@ def main():
     total_value, selected_indices, ratio = greedy_knapsack_2_approx(items, capacity)
 
     # Вывод результата
-    print("\n=== Результат ===")
+    print("Результат")
     if selected_indices:
         print("Выбранные предметы:")
         for i in selected_indices:
@@ -96,3 +96,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
